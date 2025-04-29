@@ -1,0 +1,88 @@
+/*PALETA: DARK - #252525 + LIGHT - F9F9F9 + PRIMÁRIA - #8E007E*/
+* {
+    padding: 0px 40px 0px 40px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #252525;
+}
+
+.content {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    width: 80%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #8E007E;
+    width: 45%;
+    height: 100%;
+    border-radius: 13px;
+}
+
+.sign-up {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.first-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f9f9f9;
+    gap: 10px;
+    flex: 1 0 auto; /*FLEX GROW, FLEX SHRINK, FLEX BASIS*/
+    z-index: 1;
+    padding: 15px;
+}
+
+.first-column .description {
+    font-size: 15px;
+}
+
+.title {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 500;
+    font-size: 35px;
+    font-style: normal;
+}
+
+.second-column {
+    flex: 2 0 auto; /*FLEX GROW, FLEX SHRINK, FLEX BASIS*/
+    padding: 15px;
+}
+
+.sign-in {
+    display: none;
+    position: relative;
+}
+
