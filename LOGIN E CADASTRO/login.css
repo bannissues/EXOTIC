@@ -19,11 +19,19 @@
     background-color: #252525;
 }
 
+.title {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 500;
+    font-size: 35px;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
 .content {
     background-color: #f9f9f9;
     border-radius: 15px;
     width: 80%;
-    height: 50%;
+    height: 60%;
     position: relative;
     display: flex;
     align-items: center;
@@ -39,19 +47,7 @@
     border-radius: 13px;
 }
 
-.sign-up {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin: 15px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
+/*INICIO DE CUSTOMIZAÇÃO DA COLUNA ALTERNATIVA DE LOGIN/CADASTRO*/
 .first-column {
     display: flex;
     flex-direction: column;
@@ -63,26 +59,98 @@
     flex: 1 0 auto; /*FLEX GROW, FLEX SHRINK, FLEX BASIS*/
     z-index: 1;
     padding: 15px;
+    padding-left: 30px;
+}
+
+.first-column .title{
+    margin-bottom: 35px;
 }
 
 .first-column .description {
-    font-size: 15px;
+    font-size: 18px;
 }
 
-.title {
-    font-family: "UnifrakturMaguntia", cursive;
+.first-column .btn {
+    border: none;
+    border-radius: 13px;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 18px;
     font-weight: 500;
-    font-size: 35px;
-    font-style: normal;
+    color: #f9f9f9;
+    background-color: transparent;
+    transition: 0.3s ease;
 }
 
+.first-column .btn:hover {
+    background-color: #f9f9f9;
+    color: #252525;
+}
+
+/*INÍCIO DA CUSTOMIZAÇÃO DA COLUNA DE LOGIN/CADASTRO*/
 .second-column {
+    display: flex;
+    flex-direction: column;
     flex: 2 0 auto; /*FLEX GROW, FLEX SHRINK, FLEX BASIS*/
     padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 130px 130px 130px;
+    gap: 9px;
+}
+
+.data-box {
+    border: 0px 0px 1px 0px;
+    padding: 5px;
+    font-size: 13px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    border-color: #252525;
+}
+
+input[type="date"]{
+    color: #6d6767; /*tentativa de cor de placeholder*/
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+.second-column .btn {
+        border: none;
+        border-radius: 13px;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #252525;
+        background-color: transparent;
+        transition: 0.5s ease;
+}
+
+.second-column .btn:hover {
+    color: #f9f9f9;
+    background-color: #252525;
 }
 
 .sign-in {
     display: none;
     position: relative;
 }
-
