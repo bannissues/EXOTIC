@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #252525;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.navbar-item {
+    position: relative;
+    list-style: none;
+}
+
+.navbar-item > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.navbar-item > a:hover {
+    background-color: #8E007E;
+    border-radius: 6px;
+}
+
+/* Dropdown oculto por padrão */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 180px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.4s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px;
+    z-index: 100;
+}
+
+.dropdown a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #252525;
+}
+
+/* Exibe dropdown ao passar o mouse */
+.navbar-item:hover .dropdown {
+    opacity: 1;
+    max-height: 500px;
+}
