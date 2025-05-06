@@ -12,7 +12,7 @@
 }
 
 .body {
-        background-color: #252525;
+    background-color: #252525;
 }
 
 .logo{
@@ -33,11 +33,12 @@
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    max-height: 100vh;
     background-color: #252525;
-    margin-top: -140px;
+    margin-top: 40px;
 }
 
 .title {
@@ -57,6 +58,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .content::before {
@@ -66,6 +76,12 @@
     width: 45%;
     height: 100%;
     border-radius: 13px;
+}
+
+.content.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1.02);
 }
 
 /*INICIO DE CUSTOMIZAÇÃO DA COLUNA ALTERNATIVA DE LOGIN/CADASTRO*/
@@ -80,7 +96,6 @@
     flex: 1 0 auto; /*FLEX GROW, FLEX SHRINK, FLEX BASIS*/
     z-index: 1;
     padding: 15px;
-    padding-left: 30px;
 }
 
 .first-column .title{
@@ -118,8 +133,7 @@
     justify-content: center;
 }
 
-.sign-up {
-    display: none;
+.sign-up {  
     align-items: center;
     gap: 15px;
     margin: 15px;
@@ -171,15 +185,6 @@ input:focus{
      background-color: transparent;
 }
 
-.sign-in {
-    display: flex;
-    position: relative;
-}
-
-.sign-in .first-column {
-    padding-left: -30px;
-}
-
 .login-form {
     display: flex;
     flex-direction: column;
@@ -190,4 +195,9 @@ input:focus{
 .forgot-password {
     color: #252525;
     text-decoration: none;
+}
+
+.sign-in {
+    margin-top: 16px;
+    margin-left: 15px;
 }
