@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Faculty Glyphic", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -9,13 +9,24 @@ body {
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.logo {
+    max-width: 90px;
+    max-height: 90px;
+    width: auto;
+    height: auto;
+    padding-right: 580px;
+    padding-left: 20px;
 }
 
 .navbar-item {
     position: relative;
     list-style: none;
+    font-family: "Pirata One", system-ui;
+    font-size: 20px;
 }
 
 .navbar-item > a {
@@ -36,7 +47,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
+    background-color: #252525;
     min-width: 180px;
     opacity: 0;
     max-height: 0;
@@ -48,14 +59,16 @@ body {
 }
 
 .dropdown a {
-    color: #000;
+    color: #f9f9f9;
     padding: 12px 16px;
     text-decoration: none;
+    font-size: 16px;
     display: block;
+    transition: 0.3s ease;
 }
 
 .dropdown a:hover {
-    background-color: #252525;
+    background-color: #8E007E;
 }
 
 /* Exibe dropdown ao passar o mouse */
