@@ -42,7 +42,7 @@
 }
 
 .title {
-    font-family: "UnifrakturMaguntia", cursive;
+    font-family: "Pirata One", system-ui;
     font-weight: 500;
     font-size: 35px;
     font-style: normal;
@@ -170,6 +170,7 @@ input:focus{
 
 .second-column .btn {
         border: none;
+        text-decoration: none;
         border-radius: 6px;
         margin-top: 20px;
         padding: 10px;
@@ -185,6 +186,19 @@ input:focus{
      background-color: transparent;
 }
 
+#Sexo {
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 2px;
+    color: #6d6767;
+}
+
+#Sexo:focus{
+    outline: none;
+}
+
 .login-form {
     display: flex;
     flex-direction: column;
@@ -195,6 +209,11 @@ input:focus{
 .forgot-password {
     color: #252525;
     text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
 }
 
 .sign-in {
