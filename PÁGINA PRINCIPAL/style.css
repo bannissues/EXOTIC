@@ -1,7 +1,8 @@
-body {
+* {
     font-family: "Faculty Glyphic", sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -18,7 +19,7 @@ body {
     max-height: 90px;
     width: auto;
     height: auto;
-    padding-right: 580px;
+    padding-right: 630px;
     padding-left: 20px;
 }
 
@@ -26,7 +27,7 @@ body {
     position: relative;
     list-style: none;
     font-family: "Pirata One", system-ui;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .navbar-item > a {
@@ -42,7 +43,7 @@ body {
     border-radius: 6px;
 }
 
-/* Dropdown oculto por padrão */
+/* dropdown oculto por padrão */
 .dropdown {
     position: absolute;
     top: 100%;
@@ -71,16 +72,186 @@ body {
     background-color: #8E007E;
 }
 
-/* Exibe dropdown ao passar o mouse */
+/* exibe dropdown ao passar o mouse */
 .navbar-item:hover .dropdown {
     opacity: 1;
     max-height: 500px;
 }
 
+/* INÍCIO DA SESSÃO PRINCIPAL*/
+
+.presentation,
+.reason,
+.mission,
+.bands {
+    max-height: 100vh;
+    min-height: 40vh;
+    padding: 60px 80px;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-left {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 80px;
+}
+
+.main-center {
+    display: flex;
+    justify-content: center;
+}
+
+.main-right {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 90px;
+}
+
+.section-description {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 20px;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url("./../IMAGENS/MAIN-IMMINENCE.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.presentation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #ffffffc6, #ffffff00);
+    z-index: 1;
+}
+
+.presentation > * {
+    position: relative;
+    z-index: 2;
+}
+
+.reason {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    background-image: url("./../IMAGENS/MAIN-IV.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.reason::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, #ffffffa0, #ffffff00);
+    z-index:1;
+}
+
+.reason > * {
+    position: relative;
+    z-index: 2;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url("./../IMAGENS/MAIN-JESSECASH.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.mission::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #ffffffc6, #ffffff00);
+    z-index: 1;
+}
+
+.mission > * {
+    position: relative;
+    z-index: 2;
+}
+
+.bands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    background-image: url("./../IMAGENS/MAIN-IMMINENCE.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.bands::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff71;
+    z-index: 1;
+}
+
+.bands>* {
+    position: relative;
+    z-index: 2;
+}
+
+.endorsing {
+    display: flex;
+}
+
+.sleeptoken-logo {
+    transform: translate(25px, -30px);
+}
+
+.band-logo{
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+}
+
+
+.section-title {
+    font-family: "Pirata One", system-ui;
+    font-size: 55px;
+}
+
+/* INÍCIO DO FOOTER */
+
 .footer {
     display: flex;
     justify-content: space-between;
-    background-color: #8E007E;
+    background-color: #252525;
     padding: 10px;
 }
 
@@ -93,13 +264,26 @@ body {
 }
 .socialmedia {
     font-family: "Pirata One", system-ui;
-    font-size: 20px;
+    font-size: 25px;
     color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 15px;
+    padding-top: 23px;
     padding-bottom: 20px;
     padding-left: 15px;
+}
+
+.socialmedia-icons{
+    display: flex;
+    gap: 5px;
+}
+.socialmedia-logo {
+    max-width: 40px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    padding: 5px;
 }
 
 .signature {
