@@ -9,6 +9,7 @@
     background-color: #252525;
     padding: 10px 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     gap: 15px;
@@ -19,8 +20,9 @@
     max-height: 90px;
     width: auto;
     height: auto;
-    padding-right: 630px;
-    padding-left: 20px;
+    max-width: 90px;
+    height: auto;
+    margin-right: auto;
 }
 
 .navbar-item {
@@ -86,7 +88,7 @@
 .bands {
     max-height: 100vh;
     min-height: 40vh;
-    padding: 60px 80px;
+    padding: 60px 60px;
     justify-content: center;
     gap: 10px;
 }
@@ -111,13 +113,12 @@
 .main-right {
     display: flex;
     justify-content: flex-end;
-    padding-right: 90px;
+    padding-right: 80px;
 }
 
 .section-description {
     display: flex;
     flex-direction: column;
-    gap: 2px;
     font-size: 20px;
 }
 
@@ -250,6 +251,7 @@
 
 .footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: #252525;
     padding: 10px;
@@ -289,4 +291,73 @@
 .signature {
     font-size: 15px;
     color: #f9f9f9;
+}
+
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 38px;
+    }
+
+    .section-description {
+        font-size: 18px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar-item {
+        font-size: 16px;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .presentation,
+    .reason,
+    .mission,
+    .bands {
+        padding: 30px 20px;
+    }
+
+    .main-left,
+    .main-right {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .socialmedia-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 30px;
+    }
+
+    .section-description {
+        font-size: 16px;
+    }
+
+    .band-logo {
+        max-width: 200px;
+    }
+
+    .socialmedia-logo {
+        max-width: 30px;
+    }
+
+    .logo-footer {
+        max-width: 100px;
+    }
 }
