@@ -12,15 +12,17 @@
 }
 
 .body {
-    background-color: #252525;
+    background-image: url(./../IMAGENS/BG-MOSHPIT.png);
 }
 
 .logo{
-    max-width: 200px;
-    max-height: 150px;
+    max-width: 400px;
+    max-height: 350px;
+    min-height: 300px;
+    min-width: 250px;
     width: auto;
     height: auto;
-    padding: 5px;
+    padding-bottom: 200px;
 }
 
 .nav-login {
@@ -37,7 +39,8 @@
     justify-content: center;
     align-items: center;
     max-height: 100vh;
-    background-color: #252525;
+    background-image: url(./../IMAGENS/BG-MOSHPIT.png);
+    background-size: cover;
     margin-top: 40px;
 }
 
@@ -50,7 +53,7 @@
 }
 
 .content {
-    background-color: #f9f9f9;
+    background-color: #252525;
     border-radius: 15px;
     width: 80%;
     height: 60%;
@@ -164,39 +167,39 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
+select {
+    background-color: transparent;
+    color: #6d6767;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: 2px;
+}
+
 input:focus{
     outline: none;
 }
 
 .second-column .btn {
         border: none;
-        text-decoration: none;
         border-radius: 6px;
+        text-decoration: none;
         margin-top: 20px;
         padding: 10px;
         font-size: 18px;
         font-weight: 500;
-         color: #f9f9f9;
-         background-color: #252525;
+         color: #252525;
+         background-color: #f9f9f9;
         transition: 0.5s ease;
 }
 
 .second-column .btn:hover {
-     color: #252525;
+     color: #f9f9f9;
      background-color: transparent;
 }
 
-#Sexo {
-    background-color: transparent;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-width: 2px;
-    color: #6d6767;
-}
-
-#Sexo:focus{
-    outline: none;
+.second-column .title {
+    color: #f9f9f9;
 }
 
 .login-form {
@@ -209,14 +212,88 @@ input:focus{
 .forgot-password {
     color: #252525;
     text-decoration: none;
-    transition: 0.3s ease;
-}
-
-.forgot-password:hover {
-    text-decoration: underline;
 }
 
 .sign-in {
     margin-top: 16px;
     margin-left: 15px;
+}
+
+@media (max-width: 1024px) {
+    .form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .content::before {
+        display: none;
+    }
+
+    .first-column,
+    .second-column {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .first-column .description,
+    .second-column .description {
+        font-size: 16px;
+    }
+
+    .data-box {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .second-column .btn,
+    .first-column .btn {
+        width: 100%;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 22px;
+    }
+
+    .nav-login {
+        flex-direction: column;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .form {
+        gap: 5px;
+    }
+
+    .data-box {
+        font-size: 12px;
+    }
+
+    .first-column .btn,
+    .second-column .btn {
+        font-size: 16px;
+        padding: 8px;
+    }
 }
