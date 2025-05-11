@@ -146,6 +146,10 @@
 }
 
 .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
     background-color: #252525;
     border-radius: 8px;
     padding: 20px;
@@ -166,18 +170,22 @@
 
 .product-name {
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #f9f9f9;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    font-family: "Pirata One", system-ui;
 }
 
 .product-description {
     font-size: 14px;
-    color: #555;
+    color: #f9f9f9;
     margin-bottom: 10px;
 }
 
 .product-price {
-    font-size: 18px;
-    color: #8E007E;
+    font-size: 25px;
+    color: #ffffff;
     font-weight: bold;
 }
 
