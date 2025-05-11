@@ -19,7 +19,7 @@
     max-height: 90px;
     width: auto;
     height: auto;
-    padding-right: 630px;
+    padding-right: 690px;
     padding-left: 20px;
 }
 
@@ -76,6 +76,109 @@
 .navbar-item:hover .dropdown {
     opacity: 1;
     max-height: 500px;
+}
+
+.products-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products-title {
+    font-family: "Pirata One", system-ui;
+    font-size: 65px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+
+.type-instruments {
+    position: relative;
+    background-image: url(./../IMAGENS/MAIN-INSTRUMENTS.webp);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
+
+.type-instruments::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff44;
+    z-index: 1;
+}
+
+.type-style {
+    position: relative;
+    background-image: url(./../IMAGENS/MAIN-STYLE.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
+
+.type-style::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff31;
+    z-index: 1;
+}
+
+.product-vitrine {
+    background-image: url(./../IMAGENS/MAIN-VITRINE.jpg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas iguais */
+    gap: 20px;
+    /* espaçamento entre os itens */
+    padding: 40px;
+}
+
+.product {
+    background-color: #252525;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 4px 4px #f9f9f9;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #8E007E;
+    font-weight: bold;
 }
 
 /* INÍCIO DO FOOTER */
