@@ -9,6 +9,37 @@
     font-weight: 400;
     font-style: normal;
     font-size: 12px;
+    color: #f9f9f9;
+}
+
+/* corrige mudança de cor ao preencher campos */
+input:valid,
+input:focus,
+input:required,
+select:valid,
+select:focus {
+    background-color: #252525 !important;
+    color: #f9f9f9 !important;
+    border-color: #8E007E;
+    outline: none;
+    box-shadow: none;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px #252525 inset !important;
+    -webkit-text-fill-color: #f9f9f9 !important;
+    border-color: #8E007E !important;
+}
+
+select {
+    background-color: #252525;
+    color: #f9f9f9;
+}
+
+/* para evitar efeito do placeholder sumindo no "select" */
+select option {
+    background-color: #252525;
+    color: #f9f9f9;
 }
 
 .body {
@@ -123,6 +154,10 @@
 .first-column .btn:hover {
     color: #f9f9f9;
     background-color: transparent;
+}
+
+.gambiarra{
+    color: transparent;
 }
 
 /*INÍCIO DA CUSTOMIZAÇÃO DA COLUNA DE LOGIN/CADASTRO*/

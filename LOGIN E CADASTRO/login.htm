@@ -30,28 +30,29 @@
             <div class="second-column register">
                 <h2 class="title">Criar conta</h2>
 
-                <form class="form">
+                <form action="./login.htm" onsubmit="return validarCadastro(event)" class="form">
                     <input class="data-box" type="text" placeholder="Nome*" required>
                     <input class="data-box" type="date" placeholder="Data de nascimento" required>
-                    <select name="Sexo" id="Sexo">
+                    <select name="Sexo" id="sexo">
                         <option value="select*">Selecione...</option>
                         <option value="Masc">Masculino</option>
                         <option value="Fem">Feminino</option>
                     </select>
-                    <input class="data-box" type="email" placeholder="Email*" required>
-                    <input class="data-box" type="text" placeholder="CPF*" required>
-                    <input class="data-box" type="text" placeholder="Celular*" required>
-                    <input class="data-box" type="text" placeholder="Telefone">
-                    <input class="data-box" type="text" placeholder="Nome da mãe*" required>
-                    <input class="data-box" type="text" placeholder="CEP*" required>
-                    <input class="data-box" type="text" placeholder="Logradouro*" required>
-                    <input class="data-box" type="text" placeholder="Número*" required>
-                    <input class="data-box" type="text" placeholder="Complemento">
-                    <input class="data-box" type="text" placeholder="Login*" required>
-                    <input class="data-box" type="password" placeholder="Senha*" required>
-                    <input class="data-box" type="password" placeholder="Confirme a senha*" required>
+                    <input id="email" class="data-box" type="email" placeholder="Email*" required>
+                    <input id="cpf" class="data-box" type="text" placeholder="CPF*" required>
+                    <input id="celular" class="data-box" type="text" placeholder="Celular*" required>
+                    <input id="telefone" class="data-box" type="text" placeholder="Telefone">
+                    <input id="nome-da-mae" class="data-box" type="text" placeholder="Nome da mãe*" required>
+                    <input id="cep" class="data-box" type="text" placeholder="CEP*" required onblur="buscarCep()">
+                    <input id="logradouro" class="data-box" type="text" placeholder="Logradouro*" required>
+                    <input id="numero" class="data-box" type="text" placeholder="Número*" required>
+                    <input id="complemento" class="data-box" type="text" placeholder="Complemento">
+                    <input id="login" class="data-box" type="text" placeholder="Login*" required>
+                    <input id="senha" class="data-box" type="password" placeholder="Senha*" required>
+                    <input id="confirmar-senha" class="data-box" type="password" placeholder="Confirme a senha*" required>
+                    <h1 class="gambiarra">a</h1>
+                    <button type="submit" class="btn">FINALIZAR</button>
                 </form>
-               <a href="./login.htm"><button class="btn">FINALIZAR</button></a>
             </div>
         </div>
         <div class="sign-in content">
@@ -63,11 +64,11 @@
             </div>
             <div class="second-column">
                 <h2 class="title" id="login">Entre na Exotic</h2>
-                <form class="form login-form">
+                <form action="./../PÁGINA PRINCIPAL/index.htm" class="form login-form">
                     <input class="data-box" type="text" placeholder="Login" required>
                     <input class="data-box" type="password" placeholder="Senha" required>
                     <a class="forgot-password" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Esqueceu sua senha?</a>
-                <a href="./../PÁGINA PRINCIPAL/index.htm" class="btn">ENTRAR</a>
+                <button type="submit" class="btn">ENTRAR</button>
                 </form>
             </div>
         </div>
