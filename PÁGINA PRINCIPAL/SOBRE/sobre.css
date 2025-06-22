@@ -41,7 +41,7 @@
 }
 
 .navbar-item>a:hover {
-    background-color: #8E007E;
+    background-color: #252525;
     border-radius: 6px;
 }
 
@@ -50,7 +50,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #252525;
+    background-color: #8E007E;
     min-width: 180px;
     opacity: 0;
     max-height: 0;
@@ -71,7 +71,7 @@
 }
 
 .dropdown a:hover {
-    background-color: #8E007E;
+    background-color: #252525;
 }
 
 /* exibe dropdown ao passar o mouse */
